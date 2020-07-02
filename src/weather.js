@@ -20,7 +20,8 @@ const forecast = (longitutde, lagitude, callback )=> {
             callback('Unable to find location', undefined)
         }
         else{
-            callback(undefined, body.current.weather_descriptions[0]+ " .It is currently "+body.current.temperature+ " degrees and feels like " + body.current.feelslike + " degrees" )
+
+            callback(undefined, body.current.weather_descriptions[0]+ " .It is currently "+body.current.temperature+ " degrees and feels like " + body.current.feelslike + " degrees. Humidity is about "+ body.current.humidity+" %" )
         }
     })
 
